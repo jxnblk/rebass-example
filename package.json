@@ -1,0 +1,24 @@
+{
+  "name": "rebass-example",
+  "version": "1.0.0",
+  "description": "Rebass React component for showing JSX examples",
+  "main": "example.js",
+  "scripts": {
+    "jsx": "jsx -x jsx src .",
+    "prepublish": "npm run jsx",
+    "start": "jsx -x jsx -w src ."
+  },
+  "author": "Brent Jackson",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^0.12.2"
+  },
+  "dependencies": {
+    "classnames": "^1.1.4",
+    "highlight.js": "^8.4.0",
+    "react-to-jsx": "^1.2.0"
+  },
+  "devDependencies": {
+    "react-tools": "^0.12.2"
+  }
+}
