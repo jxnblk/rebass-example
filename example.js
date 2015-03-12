@@ -10,7 +10,8 @@ module.exports = React.createClass({displayName: "exports",
 
   getDefaultProps: function() {
     return {
-      color: 'silver'
+      color: 'silver',
+      preMaxHeight: 'none',
     }
   },
 
@@ -19,7 +20,12 @@ module.exports = React.createClass({displayName: "exports",
     //var string = string.replace(JS_COMMENT_REGEX, '');
     var code = highlight.highlight('xml', string).value;
     var html = { __html: code };
-    return React.createElement("pre", {dangerouslySetInnerHTML: html, className: "p2 mb0 rounded-bottom bg-darken-1"})
+    var style = {
+      maxHeight: this.props.preMaxHeight,
+    };
+    return React.createElement("pre", {dangerouslySetInnerHTML: html, 
+      className: "p2 mb0 rounded-bottom bg-darken-1", 
+      style: style})
   },
 
   render: function() {
